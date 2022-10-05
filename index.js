@@ -15,22 +15,22 @@ menu = "";
 
 
 
-    function ivaA(peso){
+    function ivaPorta(peso){
         let impuesto = ((portaNotebook*21)+portaNotebook);
         return impuesto;
     }
- function ivaB(peso){
+ function ivaMesa(peso){
     let impuesto = ((mesa*21)+ mesa);
     return impuesto
  }
- function ivaC(peso){
+ function ivabiblio(peso){
     let impuesto = ((biblioteca*21)+ biblioteca);
     return impuesto
  }
  let = productoElegido = prompt("seleccione el producto que desea consultar \n1 Porta notebook \n2 mesa \n3 biblioteca \n s para salir ")
- while (productoElegido == "s") {
-    alert("Hasta luego");
-}
+ //while (productoElegido == "s") {
+   // alert("Hasta luego");
+//}
 
  while (menu != "s"){
 switch (productoElegido){
@@ -39,7 +39,7 @@ switch (productoElegido){
         alert("Elegiste Porta notebook que tiene un costo de "+portaNotebook);
         let compra1 = prompt("ingresa 5 para confirmar compra")
         if(compra1 == "5"){
-            let total1 = ivaA(portaNotebook);
+            let total1 = ivaPorta(portaNotebook);
             alert("lo que debes abonar es $" + total1);
         }
         else{
@@ -51,7 +51,7 @@ switch (productoElegido){
         alert("Elegiste Mesa que tiene un costo de "+mesa);
         let compra2 = prompt("ingresa 5 para confirmar compra")
         if(compra2 == "5"){
-            let total2 = ivaB(mesa);
+            let total2 = ivaMesa(mesa);
             alert("lo que debes abonar es $" + total2);
         }
         else{
@@ -64,7 +64,7 @@ switch (productoElegido){
         alert("Elegiste biblioteca que tiene un costo de "+biblioteca);
         let compra3 = prompt("ingresa 5 para confirmar compra")
         if(compra1 == "5"){
-            let total3 = ivaC(biblioteca);
+            let total3 = ivaBiblio(biblioteca);
             alert("lo que debes abonar es $" + total3);
         }
         else{
@@ -73,12 +73,18 @@ switch (productoElegido){
         }
         break;
 
+        case "s":
+            alert("Hasta luego")
+            break;
+
         default:
             alert("Producto sin stock")
             break;
         
 }
-let = productoElegido = prompt("seleccione el producto que desea consultar \n1 Porta notebook \n2 mesa \n3 biblioteca \n s para salir ")
+let nombre = prompt("Ingrese su nombre")
+saludo();
+productoElegido = prompt("seleccione el producto que desea consultar \n1 Porta notebook \n2 mesa \n3 biblioteca \n s para salir ")
 
 
 
